@@ -74,7 +74,7 @@ export default idFields = (props) => h('section', {
             }, [
                 select({
                     index,
-                    value: !!props.userSearchFields[index] ? props.userSearchFields[index].identifier : 'Select',
+                    value: !!props.userSearchFields[index] && props.userSearchFields[index].identifier ? props.userSearchFields[index].identifier : 'Select',
                     options: values(inputFieldLabels),
                     onOptionSelect: OptionSelect
                 }),
